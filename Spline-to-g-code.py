@@ -12,9 +12,11 @@ f_r = 1200
 # add debug toggle
 debug_g = 0
 # Set f_e as the maximum amoutn of extrusion that can be added per point.
-f_e = 1
+f_e = 1# Set filename and location
+g_file = 'C:/Directory/goes/here/spline.gcode'
+
 # Open g-code file for output
-with open('H:/Blender/softrobotics/Splines/spline.gcode', 'w') as f:
+with open(g_file, 'w') as f:
     # write the start gcode to the file
     f.write(f""";start g-code
 M221 T0 S100.00
