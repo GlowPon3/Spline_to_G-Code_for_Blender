@@ -29,6 +29,7 @@ G28 ;Home
 G92 E0 ;Reset Extruder
 G1 Z2.0 F3000 ;Move Z Axis up
 G90 ;Set absolute position mode
+M83 :Set extruder to relative mode
 ;start g-code
 ;Begin drawing spline by drawing to the first point
 """)
