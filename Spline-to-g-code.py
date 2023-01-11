@@ -54,7 +54,17 @@ G90 ;Set absolute position mode
         if debug_g:
             f.write(f"G1 F{s1} X{x1} Y{y1} Z{z1} E{e1} (Extrude-{r1} Speed {t2}Percent Distance-{e2}mm)\n")
         else:
-            f.write(f"G1 F{s1} X{x1} Y{y1} Z{z1} E{e1}\n")
+            if e1:
+                if (z1 == z2):
+                    f.write(f"G1 F{s1} X{x1} Y{y1} E{e1}\n")
+                else:
+                    f.write(f"G1 F{s1} X{x1} Y{y1} Z{z1} E{e1}\n")
+            else:
+                if (z1 == z2):
+                    f.write(f"G0 F{s1} X{x1} Y{y1}\n")
+                else:
+                    f.write(f"G0 F{s1} X{x1} Y{y1} Z{z1}\n")
+                    
         # Shift current vertex into last_vertex vars
         x2 = x1
         y2 = y1
