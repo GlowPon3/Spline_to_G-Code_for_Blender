@@ -17,3 +17,4 @@ def translate_gcode(gcode_file, x_value, y_value, z_value):
 
 # example usage
 translate_gcode('example.gcode', 0.5, -0.5, 0.2)
+# edit the above line only.  Include full path if needed.
